@@ -6,25 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".FormActivity">
 
-    <Button
-        android:id="@+id/activity_form_save_button"
-        android:layout_width="392dp"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="513dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Ok"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="538dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/activity_form_edit_text"
-        android:layout_width="378dp"
+        <EditText
+            android:id="@+id/activity_form_edit_text"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="87dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/activity_form_save_button"
+            android:layout_width="424dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:text="Ok"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="468dp" />
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == 0134){
             if(resultCode == RESULT_OK && data.getExtras() != null){
                Log.d("", "");
-               String name = data.getStringExtra("USERNAME");
+               String name = data.getStringExtra(FormActivity.KEY_USERNAME);
                textViewName.setText(name);
             } else {
                 // handle errors
