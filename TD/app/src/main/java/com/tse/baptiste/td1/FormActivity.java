@@ -27,11 +27,15 @@ public class FormActivity extends AppCompatActivity {
         });
     }
 
-    private void save(){
+    private void save() {
         String name = editTextName.getText().toString();
-        Intent resultIntent = new Intent();
-        resultIntent.putExtra(KEY_USERNAME, name);
-        setResult(RESULT_OK, resultIntent);
+        if(!name.isEmpty()){
+            DataManager.getInstances().addName(name);
+        }
+//        Intent resultIntent = new Intent();
+//        resultIntent.putExtra(KEY_USERNAME, name);
+//        setResult(RESULT_OK, resultIntent);
+//        DataManager.getInstances().setName(name);
         finish();
     }
 }
